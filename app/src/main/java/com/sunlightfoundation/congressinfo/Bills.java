@@ -48,7 +48,7 @@ public class Bills extends Fragment {
         fragContext = container.getContext();
         lvBills = (ListView)BillView.findViewById(R.id.bills_active_legView);
 
-        requestData("http://ganmanicongress.phnhp2mkum.us-west-2.elasticbeanstalk.com/congress.php?type=billactive");
+        requestData("http://congress.api.sunlightfoundation.com/bills?history.active=true&apikey=eb6c342bbcc448fb96a33f3a8dca3b98&per_page=all");
         return lvBills;
 
     }
@@ -58,7 +58,7 @@ public class Bills extends Fragment {
     }
 
     protected void updateDisplay(String message){
-        //output.append(message + "\n");
+
     }
 
     protected void updateConsole(String message){

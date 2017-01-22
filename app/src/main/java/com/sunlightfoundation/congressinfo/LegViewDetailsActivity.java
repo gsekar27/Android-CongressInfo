@@ -188,7 +188,6 @@ public class LegViewDetailsActivity extends AppCompatActivity {
                 intent.setAction(Intent.ACTION_VIEW);
                 intent.addCategory(Intent.CATEGORY_BROWSABLE);
                 intent.setData(Uri.parse(fb_url));
-                //if(intent.resolveActivity((getPackageManager()))!= null){
                 startActivity(intent);
             }
 
@@ -217,7 +216,6 @@ public class LegViewDetailsActivity extends AppCompatActivity {
                 intent.setAction(Intent.ACTION_VIEW);
                 intent.addCategory(Intent.CATEGORY_BROWSABLE);
                 intent.setData(Uri.parse(t_url));
-                //if(intent.resolveActivity((getPackageManager()))!= null){
                 startActivity(intent);
             }
 

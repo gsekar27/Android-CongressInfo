@@ -60,7 +60,7 @@ public class FavLeg extends Fragment {
         lvLeg = (ListView)LegView.findViewById(R.id.leg_state_legView);
 
 
-        requestData("http://ganmanicongress.phnhp2mkum.us-west-2.elasticbeanstalk.com/congress.php?type=favleg");
+        requestData("http://congress.api.sunlightfoundation.com/legislators?apikey=eb6c342bbcc448fb96a33f3a8dca3b98&per_page=all");
         return LegView;
 
     }
@@ -108,20 +108,16 @@ public class FavLeg extends Fragment {
                 }
             });
 
-
-
             indexLayout.addView(textview);
 
-
         }
-
 
     }
 
 
 
     protected void updateConsole(String message){
-        //Log.i("tag",message);
+
     }
 
       class MyTask extends AsyncTask<String,String, List<LegislatorMemebers>>{
@@ -149,8 +145,6 @@ public class FavLeg extends Fragment {
                     if(fav.isFavLeg(member.getBioguide_id())){
                         LegStateMembers.add(member);
                     }
-
-
 
                 }
 
@@ -182,12 +176,9 @@ public class FavLeg extends Fragment {
             lvLeg.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
                 public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                   // Toast.makeText(fragContext,"you clicked " + result.get(i).getBioguide_id(), Toast.LENGTH_SHORT).show();
+
                     LegislatorMemebers vd_member = result.get(i);
                     Intent intent = new Intent(fragContext, LegViewDetailsActivity.class);
-                    //String str_vd_member = new Gson().toJson(vd_member);
-
-                    //intent.putExtra(ITEM_ID_KEY, str_vd_member );
 
                     Bundle bundle = new Bundle();
                     bundle.putSerializable(ITEM_ID_KEY, vd_member);

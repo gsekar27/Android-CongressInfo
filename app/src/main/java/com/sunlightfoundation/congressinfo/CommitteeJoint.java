@@ -47,7 +47,7 @@ public class CommitteeJoint extends Fragment {
         fragContext = container.getContext();
         lvComm = (ListView)commView.findViewById(R.id.comm_joint_View);
 
-        requestData("http://ganmanicongress.phnhp2mkum.us-west-2.elasticbeanstalk.com/congress.php?type=commjoint");
+        requestData("http://congress.api.sunlightfoundation.com/committees?chamber=joint&apikey=eb6c342bbcc448fb96a33f3a8dca3b98&per_page=all");
         return commView;
 
     }
@@ -57,7 +57,7 @@ public class CommitteeJoint extends Fragment {
     }
 
     protected void updateDisplay(String message){
-        //output.append(message + "\n");
+
     }
 
     protected void updateConsole(String message){
@@ -112,12 +112,10 @@ public class CommitteeJoint extends Fragment {
             lvComm.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
                 public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                   // Toast.makeText(fragContext,"you clicked " + result.get(i).getBioguide_id(), Toast.LENGTH_SHORT).show();
+
                     CommitteeList vd_member = result.get(i);
                     Intent intent = new Intent(fragContext, CommViewDetailsActivity.class);
-                    //String str_vd_member = new Gson().toJson(vd_member);
 
-                    //intent.putExtra(ITEM_ID_KEY, str_vd_member );
 
                     Bundle bundle = new Bundle();
                     bundle.putSerializable(COMM_ITEM_ID_KEY, vd_member);
@@ -135,7 +133,7 @@ public class CommitteeJoint extends Fragment {
 
         protected void  onProgressUpdate(String... Values){
 
-            //updateDisplay(Values[0]);
+
         }
     }
 

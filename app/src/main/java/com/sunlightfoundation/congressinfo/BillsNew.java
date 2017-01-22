@@ -46,16 +46,8 @@ public class BillsNew extends Fragment {
         View BillView = inflater.inflate(R.layout.bills_new,container,false);
         fragContext = container.getContext();
         lvBills = (ListView)BillView.findViewById(R.id.bills_new_legView);
-        //output = LegView.findViewById(R.id.leg_state_TextView);
-        //output = (ListView) LegView.findViewById(R.id.leg_state_legView);
-        //output.setMovementMethod(new ScrollingMovementMethod());
-        //String[] menuItems = {"do something", "do something", "do something"};
-        //ListView legListView = (ListView) LegView.findViewById(R.id.leg_state_listView);
-        //ArrayAdapter<String> legListViewAdapter = new ArrayAdapter<String>(
-                //getActivity(),android.R.layout.simple_list_item_1,menuItems);
 
-        //legListView.setAdapter(legListViewAdapter);
-        requestData("http://ganmanicongress.phnhp2mkum.us-west-2.elasticbeanstalk.com/congress.php?type=billnew");
+        requestData("http://congress.api.sunlightfoundation.com/bills?history.active=false&apikey=eb6c342bbcc448fb96a33f3a8dca3b98&per_page=all");
         return lvBills;
 
     }
@@ -65,7 +57,7 @@ public class BillsNew extends Fragment {
     }
 
     protected void updateDisplay(String message){
-        //output.append(message + "\n");
+
     }
 
     protected void updateConsole(String message){
@@ -122,12 +114,10 @@ public class BillsNew extends Fragment {
             lvBills.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
                 public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                   // Toast.makeText(fragContext,"you clicked " + result.get(i).getBioguide_id(), Toast.LENGTH_SHORT).show();
+
                     BillsList vd_item = result.get(i);
                     Intent intent = new Intent(fragContext, BillsViewDetailsActivity.class);
-                    //String str_vd_member = new Gson().toJson(vd_member);
 
-                    //intent.putExtra(ITEM_ID_KEY, str_vd_member );
 
                     Bundle bundle = new Bundle();
                     bundle.putSerializable(BILL_ITEM_ID_KEY, vd_item);
@@ -145,7 +135,7 @@ public class BillsNew extends Fragment {
 
         protected void  onProgressUpdate(String... Values){
 
-            //updateDisplay(Values[0]);
+
         }
     }
 

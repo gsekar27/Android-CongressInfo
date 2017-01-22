@@ -47,7 +47,7 @@ public class Committee extends Fragment {
         fragContext = container.getContext();
         lvComm = (ListView)commView.findViewById(R.id.comm_house_View);
 
-        requestData("http://ganmanicongress.phnhp2mkum.us-west-2.elasticbeanstalk.com/congress.php?type=commhouse");
+        requestData("http://congress.api.sunlightfoundation.com/committees?chamber=house&apikey=eb6c342bbcc448fb96a33f3a8dca3b98&per_page=all");
         return commView;
 
     }
@@ -135,7 +135,7 @@ public class Committee extends Fragment {
 
         protected void  onProgressUpdate(String... Values){
 
-            //updateDisplay(Values[0]);
+
         }
     }
 

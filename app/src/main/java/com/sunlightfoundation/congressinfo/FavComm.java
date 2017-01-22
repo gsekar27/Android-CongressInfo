@@ -48,7 +48,7 @@ public class FavComm extends Fragment {
         fragContext = container.getContext();
         lvComm = (ListView)commView.findViewById(R.id.comm_house_View);
 
-        requestData("http://ganmanicongress.phnhp2mkum.us-west-2.elasticbeanstalk.com/congress.php?type=favcomm");
+        requestData("http://congress.api.sunlightfoundation.com/committees?apikey=eb6c342bbcc448fb96a33f3a8dca3b98&per_page=all");
         return commView;
 
     }
@@ -120,12 +120,10 @@ public class FavComm extends Fragment {
             lvComm.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
                 public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                   // Toast.makeText(fragContext,"you clicked " + result.get(i).getBioguide_id(), Toast.LENGTH_SHORT).show();
+
                     CommitteeList vd_member = result.get(i);
                     Intent intent = new Intent(fragContext, CommViewDetailsActivity.class);
-                    //String str_vd_member = new Gson().toJson(vd_member);
 
-                    //intent.putExtra(ITEM_ID_KEY, str_vd_member );
 
                     Bundle bundle = new Bundle();
                     bundle.putSerializable(COMM_ITEM_ID_KEY, vd_member);

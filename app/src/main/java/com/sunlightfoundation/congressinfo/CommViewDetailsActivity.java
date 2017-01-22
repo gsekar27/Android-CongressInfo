@@ -80,7 +80,7 @@ public class CommViewDetailsActivity extends AppCompatActivity {
 
     public void addRemCommToFav(View view) {
 
-        //fav = (GlobalVariables) getApplicationContext();
+
         ImageView img = (ImageView) view;
 
         if (fav.isFavComm(vd_mem.getCommittee_id())) {

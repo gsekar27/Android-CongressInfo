@@ -46,7 +46,7 @@ public class FavBills extends Fragment {
         fragContext = container.getContext();
         lvBills = (ListView)BillView.findViewById(R.id.bills_active_legView);
 
-        requestData("http://ganmanicongress.phnhp2mkum.us-west-2.elasticbeanstalk.com/congress.php?type=favbill");
+        requestData("http://congress.api.sunlightfoundation.com/bills?apikey=eb6c342bbcc448fb96a33f3a8dca3b98&per_page=all");
         return lvBills;
 
     }
@@ -56,7 +56,7 @@ public class FavBills extends Fragment {
     }
 
     protected void updateDisplay(String message){
-        //output.append(message + "\n");
+
     }
 
     protected void updateConsole(String message){
@@ -110,12 +110,10 @@ public class FavBills extends Fragment {
             lvBills.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
                 public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                   // Toast.makeText(fragContext,"you clicked " + result.get(i).getBioguide_id(), Toast.LENGTH_SHORT).show();
+
                     BillsList vd_item = result.get(i);
                     Intent intent = new Intent(fragContext, BillsViewDetailsActivity.class);
-                    //String str_vd_member = new Gson().toJson(vd_member);
 
-                    //intent.putExtra(ITEM_ID_KEY, str_vd_member );
 
                     Bundle bundle = new Bundle();
                     bundle.putSerializable(BILL_ITEM_ID_KEY, vd_item);
@@ -133,7 +131,7 @@ public class FavBills extends Fragment {
 
         protected void  onProgressUpdate(String... Values){
 
-            //updateDisplay(Values[0]);
+
         }
     }
 
