@@ -1,0 +1,51 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.sunlightfoundation.congressinfo.Other">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <ImageView
+            android:layout_width="150sp"
+            android:layout_height="150sp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/kannu"
+            android:layout_marginTop="40sp"
+            android:layout_marginBottom="20sp"
+            android:id="@+id/iv_kannu"
+            />
+
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textSize="30sp"
+            android:textColor="@color/black"
+            android:layout_below="@id/iv_kannu"
+            android:layout_marginBottom="20sp"
+            android:text="Ganmani Sekar"
+            android:id="@+id/txt_student_name"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textSize="30sp"
+            android:textColor="@color/black"
+
+            android:text="8698759544"
+            android:id="@+id/txt_student_id"
+            android:layout_below="@id/txt_student_name"/>
+
+    </RelativeLayout>
+
+
+
+
+</FrameLayout>

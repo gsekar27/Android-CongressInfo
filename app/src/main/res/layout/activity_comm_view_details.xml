@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ScrollView01"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:orientation="vertical"
+        tools:context=".CommViewDetailsActivity">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/comm_vd_btm_margin">
+
+            <ImageView
+                android:id="@+id/iv_comm_fav"
+                android:layout_width="@dimen/star_width"
+                android:layout_height="@dimen/star_height"
+                android:layout_alignParentRight="true"
+                android:onClick="addRemCommToFav"
+                />
+
+        </RelativeLayout>
+
+
+
+        <!---Committee ID -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/comm_vd_btm_margin">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Committee ID:"
+                android:layout_alignParentLeft="true"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/comm_vd"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="XXX"
+                android:layout_alignParentRight="true"
+                android:textSize="@dimen/bills_vd"
+                android:id="@+id/txt_comm_vd_id"
+                />
+
+        </RelativeLayout>
+
+        <!---Name -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/comm_vd_btm_margin">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name:"
+                android:layout_alignParentLeft="true"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/comm_vd"
+                />
+
+            <TextView
+
+                android:layout_width="150sp"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:text="XXX"
+                android:layout_alignParentRight="true"
+                android:textSize="@dimen/comm_vd"
+                android:id="@+id/txt_comm_vd_name"
+                />
+
+        </RelativeLayout>
+
+        <!---Chamber -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/comm_vd_btm_margin">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Chamber:"
+                android:layout_alignParentLeft="true"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/comm_vd"
+                />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/iv_comm_chamber"
+                    android:layout_width="40sp"
+                    android:layout_height="40sp"
+                    android:layout_alignParentRight="true"
+
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="XXX"
+
+                    android:textSize="@dimen/comm_vd"
+                    android:id="@+id/txt_comm_vd_chamber"
+                    />
+
+            </LinearLayout>
+
+
+
+        </RelativeLayout>
+
+        <!---Parent Committee -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/comm_vd_btm_margin">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Parent Committee:"
+                android:layout_alignParentLeft="true"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/comm_vd"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="XXX"
+                android:layout_alignParentRight="true"
+                android:textSize="@dimen/comm_vd"
+                android:id="@+id/txt_comm_vd_parentComm"
+                />
+
+        </RelativeLayout>
+
+        <!---Contact -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/comm_vd_btm_margin">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Contact:"
+                android:layout_alignParentLeft="true"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/comm_vd"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="XXX"
+                android:layout_alignParentRight="true"
+                android:textSize="@dimen/comm_vd"
+                android:id="@+id/txt_comm_vd_contact"
+                />
+
+        </RelativeLayout>
+
+        <!---Office -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/comm_vd_btm_margin">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Office:"
+                android:layout_alignParentLeft="true"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/comm_vd"
+                />
+
+            <TextView
+                android:layout_width="150sp"
+                android:textAlignment="textEnd"
+                android:gravity="end"
+                android:layout_height="wrap_content"
+                android:text="XXX"
+                android:layout_alignParentRight="true"
+                android:textSize="@dimen/comm_vd"
+                android:id="@+id/txt_comm_vd_office"/>
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+</ScrollView>
