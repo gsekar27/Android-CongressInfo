@@ -95,15 +95,10 @@ public class BillsNew extends Fragment {
                     }
                 });
                 return billsNewList;
-
-
-
             } catch (JSONException e) {
                 e.printStackTrace();
             }
             return null;
-
-
         }
 
         @Override
@@ -117,25 +112,14 @@ public class BillsNew extends Fragment {
 
                     BillsList vd_item = result.get(i);
                     Intent intent = new Intent(fragContext, BillsViewDetailsActivity.class);
-
-
                     Bundle bundle = new Bundle();
                     bundle.putSerializable(BILL_ITEM_ID_KEY, vd_item);
-
                     intent.putExtras(bundle);
-
                     fragContext.startActivity(intent);
-
-
                 }
             });
-
-
         }
-
         protected void  onProgressUpdate(String... Values){
-
-
         }
     }
 
