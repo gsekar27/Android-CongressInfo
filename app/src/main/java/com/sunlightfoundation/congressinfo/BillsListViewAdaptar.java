@@ -71,11 +71,6 @@ public class BillsListViewAdaptar extends ArrayAdapter<BillsList> {
         }catch (Exception e){
             txt_introduced_on.setText("None");
         }
-
-
-
-
-
         return convertView;
     }
 
